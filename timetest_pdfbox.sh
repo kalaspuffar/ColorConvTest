@@ -1,21 +1,28 @@
 #!/bin/bash
 
-echo "---------------------------------------------------------"
-java -version
-java -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-08-
+source env.sh
+
+echo "-------------------"
+echo "|TEST PDFToImage  |"
+echo "-------------------"
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-9.0.4/bin/java -version
-/opt/openjdk/jdk-9.0.4/bin/java -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-09-
+${JAVA_8}/bin/java -version
+${JAVA_8}/bin/java ${JAVA_OPTS} -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-08-
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-10.0.2/bin/java -version
-/opt/openjdk/jdk-10.0.2/bin/java -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-10-
+${JAVA_9}/bin/java -version
+${JAVA_9}/bin/java ${JAVA_OPTS} -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-09-
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-11/bin/java -version
-/opt/openjdk/jdk-11/bin/java -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-11-
+${JAVA_10}/bin/java -version
+${JAVA_10}/bin/java ${JAVA_OPTS} -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-10-
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-12/bin/java -version
-/opt/openjdk/jdk-12/bin/java -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-12-
+${JAVA_11}/bin/java -version
+${JAVA_11}/bin/java ${JAVA_OPTS} -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-11-
+
+echo "---------------------------------------------------------"
+${JAVA_12}/bin/java -version
+${JAVA_12}/bin/java ${JAVA_OPTS} -jar pdfbox-app-2.0.11.jar PDFToImage -time test.pdf -prefix test-12-
+

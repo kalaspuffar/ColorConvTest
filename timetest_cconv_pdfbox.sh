@@ -1,21 +1,28 @@
 #!/bin/bash
 
-echo "---------------------------------------------------------"
-java -version
-java -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
+source env.sh
+
+echo "-------------------"
+echo "|TEST CConvPDFBox |"
+echo "-------------------"
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-9.0.4/bin/java -version
-/opt/openjdk/jdk-9.0.4/bin/java -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
+${JAVA_8}/bin/java -version
+${JAVA_8}/bin/java ${JAVA_OPTS} -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-10.0.2/bin/java -version
-/opt/openjdk/jdk-10.0.2/bin/java -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
+${JAVA_9}/bin/java -version
+${JAVA_9}/bin/java ${JAVA_OPTS} -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-11/bin/java -version
-/opt/openjdk/jdk-11/bin/java -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
+${JAVA_10}/bin/java -version
+${JAVA_10}/bin/java ${JAVA_OPTS} -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
 
 echo "---------------------------------------------------------"
-/opt/openjdk/jdk-12/bin/java -version
-/opt/openjdk/jdk-12/bin/java -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
+${JAVA_11}/bin/java -version
+${JAVA_11}/bin/java ${JAVA_OPTS} -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
+
+echo "---------------------------------------------------------"
+${JAVA_12}/bin/java -version
+${JAVA_12}/bin/java ${JAVA_OPTS} -cp target/ColorConvTest-1.0-SNAPSHOT-jar-with-dependencies.jar CConvPDFBox
+

@@ -2,11 +2,24 @@
 
 ### Prerequisite
 
+Get dependencies
+`./setup.sh` 
+
+Edit your environment to define your JDK paths:
+`cp env_template.sh env.sh`
+`vi env.sh`
+
+
+Set your CPUs to fixed frequency:
 ```
-wget http://www-eu.apache.org/dist/pdfbox/2.0.11/pdfbox-app-2.0.11.jar
-wget https://github.com/apache/pdfbox/raw/trunk/pdfbox/src/main/resources/org/apache/pdfbox/resources/icc/ISOcoated_v2_300_bas.icc
-mvn install
-``` 
+sudo cpupower -c all frequency-set -d 2.0GHz -u 2.0GHz -g performance 
+sudo cpupower -c all frequency-info
+
+# set perf bias
+sudo cpupower -c all set -b 0
+sudo cpupower -c all info
+```
+
 
 ### Result from timetest_cconv_oracle.sh
 
